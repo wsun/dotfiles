@@ -1,0 +1,34 @@
+[user]
+    name = Will Sun
+    email = wjy.sun@gmail.com
+
+[alias]
+    ci = commit -a
+    st = status
+
+[core]
+    whitespace = fix,trailing-space,space-before-tab,cr-at-eol
+
+[apply]
+    whitespace = fix
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
