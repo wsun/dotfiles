@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-Config stuff
+A perpetual work-in-progress.
