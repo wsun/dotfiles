@@ -3,8 +3,11 @@
     email = wjy.sun@gmail.com
 
 [alias]
-    ci = commit -a
+    ci = commit -a -m
     st = status
+    co = checkout
+    br = branch
+    hs = log --pretty=format:'%C(auto)[%h] %an %cr: %s'
 
 [core]
     whitespace = fix,trailing-space,space-before-tab,cr-at-eol
