@@ -8,6 +8,8 @@
     co = checkout
     br = branch
     hs = log --pretty=format:'%C(auto)[%h] %an %cr: %s'
+    po = push origin master
+    ph = push heroku master
 
 [core]
     whitespace = fix,trailing-space,space-before-tab,cr-at-eol
