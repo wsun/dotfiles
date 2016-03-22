@@ -8,6 +8,7 @@
     co = checkout
     br = branch
     hs = log --pretty=format:'%C(auto)[%h] %an %cr: %s'
+    pa = push all master
     po = push origin master
     ph = push heroku master
 
