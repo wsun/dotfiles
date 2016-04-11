@@ -11,6 +11,8 @@
     pa = push all master
     po = push origin master
     ph = push heroku master
+    ps = push staging dev:master
+    gr = log --graph --pretty=oneline --abbrev-commit
 
 [core]
     whitespace = fix,trailing-space,space-before-tab,cr-at-eol
