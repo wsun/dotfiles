@@ -1,6 +1,6 @@
 [user]
     name = Will Sun
-    email = wjy.sun@gmail.com
+    email = iamwillsun@gmail.com
 
 [alias]
     ci = commit -a -m
