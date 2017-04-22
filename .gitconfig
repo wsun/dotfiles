@@ -3,7 +3,7 @@
     email = iamwillsun@gmail.com
 
 [alias]
-    ci = commit -a -m
+    ci = commit -a
     st = status
     co = checkout
     br = branch
