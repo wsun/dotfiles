@@ -29,3 +29,7 @@ if [ -f '/Users/apollo/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/apo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/apollo/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/apollo/google-cloud-sdk/completion.zsh.inc'; fi
+
+# VSCode
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+EOF
