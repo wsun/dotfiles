@@ -1,6 +1,9 @@
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR='subl -w'
 
+### homebrew python2 shadow system python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 ### rbenv
 eval "$(rbenv init -)"
 
