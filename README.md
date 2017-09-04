@@ -59,49 +59,49 @@ brew install direnv
 ```
 
 ## Casks
-firefox
-google-chrome
-1password
-slack
-smcFanControl
-flux
-rescuetime
-coconutbattery
-dropbox
-onedrive
-google-backup-and-sync
-amazon-drive
-sublime-text
-sketch
-simplenote
-evernote
-visual-studio-code
-the-unarchiver
-skype
-whatsapp
-handbrake
-vlc
-calibre
-spotify
-iexplorer
-mactex
-sequel-pro
-sqlitebrowser
-mamp
-postico
-id3-editor
+- firefox
+- google-chrome
+- 1password
+- slack
+- smcFanControl
+- flux
+- rescuetime
+- coconutbattery
+- dropbox
+- onedrive
+- google-backup-and-sync
+- amazon-drive
+- sublime-text
+- sketch
+- simplenote
+- evernote
+- visual-studio-code
+- the-unarchiver
+- skype
+- whatsapp
+- handbrake
+- vlc
+- calibre
+- spotify
+- iexplorer
+- mactex
+- sequel-pro
+- sqlitebrowser
+- mamp
+- postico
+- id3-editor
 
 ## Programs
-garmin express
-hots
-xcode
-adobe cs6
-office 2011
-utorrent
-ie10 virtualbox tester
+- garmin express
+- hots
+- xcode
+- adobe cs6
+- office 2011
+- utorrent
+- ie10 virtualbox tester
 
 ## Global npm modules
-create-react-app
-nodemon
-react-native-cli
-sequelize-cli
+- create-react-app
+- nodemon
+- react-native-cli
+- sequelize-cli
