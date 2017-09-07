@@ -121,3 +121,10 @@ function _update_ps1() {
     }
 
 PROMPT_COMMAND='_update_ps1; unset DONTCLEANPROMPT'
+
+# gcloud sdk
+source /usr/local/lib/node_modules/@google-cloud/cloud-sdk/google-cloud-sdk/path.zsh.inc
+
+### postgres start and stop
+alias pgstart="pg_ctl -D /usr/local/var/postgres start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
