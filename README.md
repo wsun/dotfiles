@@ -46,6 +46,15 @@ rbenv rehash
 gem install bundler
 ```
 
+### Setting up Postgres
+1. Install postgres and postico.
+```
+brew install postgresql
+brew cask install postico
+```
+2. Set up .zshrc with ```pgstart``` and ```pgstop``` commands
+
+
 ### Setting up Node
 1. Install node and redis.
 ```
