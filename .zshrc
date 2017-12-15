@@ -1,3 +1,4 @@
+### load up bashrc
 [ -f $HOME/.bashrc ] && source $HOME/.bashrc
 
 # If you come from bash you might have to change your $PATH.
@@ -12,6 +13,7 @@ DEFAULT_USER="apollo"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+### use agnoster
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -56,7 +58,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew npm)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -78,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -88,9 +90,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-### direnv support
-eval "$(direnv hook zsh)"
 
 ### bottom powerline with history
 preexec () {
@@ -121,10 +120,3 @@ function _update_ps1() {
     }
 
 PROMPT_COMMAND='_update_ps1; unset DONTCLEANPROMPT'
-
-# gcloud sdk
-source /usr/local/lib/node_modules/@google-cloud/cloud-sdk/google-cloud-sdk/path.zsh.inc
-
-### postgres start and stop
-alias pgstart="pg_ctl -D /usr/local/var/postgres start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres stop"

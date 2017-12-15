@@ -20,19 +20,27 @@ gpip(){
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-# if you installed SDK via Homebrew, otherwise ~/Library/Android/sdk
-export ANDROID_HOME=/usr/local/opt/android-sdk
+# React Native android setup
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 # for direnv via homebrew
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
 
 ### Google Cloud SDK
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/apollo/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/apollo/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/apollo/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/apollo/google-cloud-sdk/completion.zsh.inc'; fi
+# update PATH
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+# shell command completion
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # VSCode
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-EOF
+
+### postgres start and stop
+alias pgstart="pg_ctl -D /usr/local/var/postgres start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
+
+### manually link node 8 LTS
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+
