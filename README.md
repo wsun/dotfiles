@@ -14,16 +14,14 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 5. Set up .zshrc
 
 ### Setting up Python
-1. Install python from homebrew. Note: this installs Python 2, available as python2.
+1. Install python from homebrew
 ```
 brew install python
 ```
-2. Set up .bashrc so python2 shadows system python
+2. Set up .bashrc so homebrew python shadows system python
 3. Install virtualenv and virtualenvwrapper
 ```
 pip install virtualenv
-```
-```
 pip install virtualenvwrapper
 ```
 
