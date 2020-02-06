@@ -69,7 +69,7 @@ curl -o- -L https://yarnpkg.com/install.sh | bash
 3. Set up .bashrc
 4. Install redis
 ```
-brew install node redis
+brew install redis
 ```
 
 ### Setting up direnv
