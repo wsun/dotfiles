@@ -14,16 +14,19 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 5. Set up .zshrc
 
 ### Setting up Python
-1. Install python from homebrew
+1. Install pyenv and pyenv-virtualenv
 ```
-brew install python
+brew install pyenv pyenv-virtualenv
 ```
-2. Set up .bashrc so homebrew python shadows system python
-3. Install virtualenv and virtualenvwrapper
+2. Install desired python version
 ```
-pip install virtualenv
-pip install virtualenvwrapper
+pyenv install 3.7.1
 ```
+3. Set up virtualenv for a project
+```
+pyenv virtualenv [version] [name]
+```
+4. Set up .bashrc with virtualenv auto-activation
 
 ### Setting up Ruby
 1. Install rbenv and ruby-install
@@ -54,7 +57,17 @@ brew cask install postico
 
 
 ### Setting up Node
-1. Install node and redis.
+1. Install NVM and target node version
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+nvm install lts/erbium
+```
+2. Install yarn directly (homebrew version includes node)
+```
+curl -o- -L https://yarnpkg.com/install.sh | bash
+```
+3. Set up .bashrc
+4. Install redis
 ```
 brew install node redis
 ```
@@ -86,9 +99,9 @@ brew install direnv
 - onedrive
 - postico
 - postman
+- rocket-typist
 - rescuetime
 - sequel-pro
-- simplenote
 - sketch
 - skype
 - slack
@@ -104,10 +117,8 @@ brew install direnv
 
 ## Programs
 - garmin express
-- hots
 - xcode
-- adobe cs6
-- office 2011
+- office 2019
 - utorrent
 - ie10 virtualbox tester
 
