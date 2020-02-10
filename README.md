@@ -78,6 +78,12 @@ brew install redis
 brew install direnv
 ```
 
+### Setting up Chrome
+Turn off dark mode bars
+```
+defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool yes
+```
+
 ## Casks
 - 1password
 - amazon-drive
