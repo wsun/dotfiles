@@ -4,6 +4,9 @@ export EDITOR='subl -w'
 ### rbenv
 eval "$(rbenv init -)"
 
+### direnv
+eval "$(direnv hook zsh)"
+
 ### Added by Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -11,9 +14,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
-
-# direnv, via homebrew
-eval "$(direnv hook zsh)"
 
 ### Google Cloud SDK
 # update PATH
