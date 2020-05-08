@@ -24,9 +24,10 @@ pyenv install 3.7.1
 ```
 3. Set up virtualenv for a project
 ```
-pyenv virtualenv [version] [name]
+pyenv virtualenv [version, e.g. 3.7.1] [name, e.g. project-env]
 ```
 4. Set up .bashrc with virtualenv auto-activation
+5. Set up .python-version with version/virtualenv details, e.g. '3.7.1/envs/project-env'
 
 ### Setting up Ruby
 1. Install rbenv and ruby-install
