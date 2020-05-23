@@ -44,3 +44,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # pyenv-virtualenv auto-activation
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# get current IP address
+alias ip="ipconfig getifaddr en0"

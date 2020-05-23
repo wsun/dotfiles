@@ -7,12 +7,13 @@
     st = status
     co = checkout
     br = branch
-    hs = log --pretty=format:'%C(auto)[%h] %an %cr: %s'
+    hs = log --pretty=format:'%C(auto)[%h]%d %an %cr: %s'
     pa = push all master
     po = push origin master
     ph = push heroku master
-    ps = push staging dev:master
+    ps = push staging master
     gr = log --graph --pretty=oneline --abbrev-commit
+    tg = tag -a
 
 [core]
     whitespace = fix,trailing-space,space-before-tab,cr-at-eol
