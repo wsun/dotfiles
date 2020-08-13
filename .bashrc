@@ -5,7 +5,7 @@ export EDITOR='subl -w'
 eval "$(rbenv init -)"
 
 ### direnv
-eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)" 
 
 ### Added by Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -47,3 +47,13 @@ eval "$(pyenv virtualenv-init -)"
 
 # get current IP address
 alias ip="ipconfig getifaddr en0"
+
+# tag a new git version
+tag() {
+	if [ "$#" -ne 1 ]; then
+	  echo "Usage: tag [0.1.3]"
+	  return 1
+	fi
+	GIT_COMMITTER_DATE="$(git show --format=%aD | head -1)"
+	git tag -a "v$1" -m \""v$1"\"
+}
