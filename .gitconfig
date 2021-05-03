@@ -10,6 +10,7 @@
     hs = log --pretty=format:'%C(auto)[%h]%d %an %cr: %s'
     pa = push all master
     po = push origin master
+    pm = push origin main
     ph = push heroku master
     ps = push staging master
     gr = log --graph --pretty=oneline --abbrev-commit
@@ -44,3 +45,6 @@
 
 [credential]
     helper = osxkeychain
+
+[pull]
+    rebase = true
