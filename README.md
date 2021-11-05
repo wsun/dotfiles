@@ -3,14 +3,14 @@
 See https://gist.github.com/kevin-smets/8568070
 1. Install iterm2
 ```
-brew cask install iterm2
+brew install --cask iterm2
 ```
 2. Select Solarized Dark colors by visiting Preferences / Profiles / Colors / Load Presets
 3. Install Oh My Zsh
 ```
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-4. Install [Powerline fonts](https://github.com/powerline/fonts)
+4. Install [Powerline fonts](https://github.com/powerline/fonts) and set Preferences / Profiles / Text / Font to Meslo LG M for Powerline, size 10
 5. Set up .zshrc
 
 ### Setting up Python
@@ -52,7 +52,7 @@ gem install bundler
 1. Install postgres and postico.
 ```
 brew install postgresql
-brew cask install postico
+brew install --cask postico
 ```
 2. Set up .zshrc with ```pgstart``` and ```pgstop``` commands
 
@@ -87,20 +87,15 @@ defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool yes
 
 ## Casks
 - 1password
-- amazon-drive
 - calibre
 - coconutbattery
-- dropbox
-- evernote
 - firefox
-- google-backup-and-sync
+- google-drive
 - google-chrome
 - google-cloud-sdk
 - handbrake
-- id3-editor
 - iexplorer
 - iterm2
-- java8
 - mactex
 - mamp
 - onedrive
@@ -109,7 +104,6 @@ defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool yes
 - rocket-typist
 - rescuetime
 - sequel-pro
-- sketch
 - skype
 - slack
 - spotify
@@ -120,7 +114,6 @@ defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool yes
 - virtualbox
 - visual-studio-code
 - vlc
-- whatsapp
 
 ## Programs
 - garmin express
@@ -132,5 +125,4 @@ defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool yes
 ## Global npm modules
 - create-react-app
 - nodemon
-- react-native-cli
 - sequelize-cli
