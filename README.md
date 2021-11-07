@@ -12,6 +12,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 4. Install [Powerline fonts](https://github.com/powerline/fonts) and set Preferences / Profiles / Text / Font to Meslo LG M for Powerline, size 10
 5. Set up .zshrc
+6. Install [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
 ### Setting up Python
 1. Install pyenv and pyenv-virtualenv
@@ -20,19 +21,19 @@ brew install pyenv pyenv-virtualenv
 ```
 2. Install desired python version
 ```
-pyenv install 3.7.1
+pyenv install 3.9.7
 ```
 3. Set up virtualenv for a project
 ```
-pyenv virtualenv [version, e.g. 3.7.1] [name, e.g. project-env]
+pyenv virtualenv [version, e.g. 3.9.7] [name, e.g. project-env]
 ```
 4. Set up .bashrc with virtualenv auto-activation
 5. Set up .python-version with version/virtualenv details, e.g. '3.7.1/envs/project-env'
 
 ### Setting up Ruby
-1. Install rbenv and ruby-install
+1. Install rbenv
 ```
-brew install rbenv ruby-install
+brew install rbenv
 ```
 2. Set up .bashrc (in place of running ```rbenv init```)
 3. Install relevant ruby versions, by running
@@ -47,6 +48,10 @@ rbenv rehash
 ```
 gem install bundler
 ```
+6. Install cocoapods via Homebrew to access `pod`
+```
+brew install cocoapods
+```
 
 ### Setting up Postgres
 1. Install postgres and postico.
@@ -60,8 +65,8 @@ brew install --cask postico
 ### Setting up Node
 1. Install NVM and target node version
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
-nvm install lts/erbium
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+nvm install lts/gallium
 ```
 2. Install yarn directly (homebrew version includes node)
 ```
@@ -111,6 +116,7 @@ defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool yes
 - steam
 - sublime-text
 - the-unarchiver
+- transmit
 - virtualbox
 - visual-studio-code
 - vlc
