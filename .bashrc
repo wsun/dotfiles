@@ -4,31 +4,25 @@ export EDITOR='subl -w'
 ### rbenv
 eval "$(rbenv init -)"
 
+### support bundler
+export GEM_HOME="$HOME/.gem"
+
 ### direnv
 eval "$(direnv hook zsh)" 
 
-### Added by Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# React Native android setup
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH="$PATH:$ANDROID_HOME/tools"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
-
 ### Google Cloud SDK
 # update PATH
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 # shell command completion
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # VSCode
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-### postgres start and stop
-### manually link specific version of postgresql
-export PATH=/usr/local/opt/postgresql@11/bin:$PATH
-alias pgstart="pg_ctl -D /usr/local/var/postgresql@11 start"
-alias pgstop="pg_ctl -D /usr/local/var/postgresql@11 stop"
+### postgres command-line (createdb)
+export PATH=/opt/homebrew/opt/postgresql@12/bin:$PATH
+alias pgstart="brew services start postgresql@12"
+alias pgstop="brew services stop postgresql@12"
 
 ### manually link mysql 5.7
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -42,6 +36,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # pyenv-virtualenv auto-activation
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
