@@ -44,13 +44,10 @@ rbenv install [version #, e.g. 2.3.3]
 ```
 rbenv rehash
 ```
-5. Set up global bundler.
+5. Set up global bundler. Check that location is pointing to correct rbenv ruby.
 ```
+gem env home
 gem install bundler
-```
-6. Install cocoapods via Homebrew to access `pod`
-```
-brew install cocoapods
 ```
 
 ### Setting up Postgres
