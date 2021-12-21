@@ -4,9 +4,6 @@ export EDITOR='subl -w'
 ### rbenv
 eval "$(rbenv init -)"
 
-### support bundler
-export GEM_HOME="$HOME/.gem"
-
 ### direnv
 eval "$(direnv hook zsh)" 
 
@@ -40,8 +37,8 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# get current IP address
-alias ip="ipconfig getifaddr en0"
+# get current IP address, copy to pasteboard
+alias ip="ipconfig getifaddr en0 | tr -d '\n' | pbcopy"
 
 # tag a new git version
 tag() {
