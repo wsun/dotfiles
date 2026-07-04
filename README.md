@@ -10,8 +10,8 @@ cd ~/dotfiles
 
 `install.sh` installs Homebrew, runs `brew bundle` (apps, CLIs, fonts, mise),
 symlinks the dotfiles into `$HOME`, installs the global runtimes pinned in
-`~/.config/mise/config.toml`, and enables Corepack. Then finish the two manual
-steps it prints (Oh My Zsh + iTerm2 font/theme).
+`~/.config/mise/config.toml`, installs Oh My Zsh, and enables Corepack. Then
+finish the manual steps it prints.
 
 ## Runtimes — mise
 
@@ -55,14 +55,10 @@ See https://gist.github.com/kevin-smets/8568070
 
 1. iTerm2 comes from the Brewfile. Load the **Solarized Dark** preset:
    Preferences → Profiles → Colors → Load Presets.
-2. Install Oh My Zsh:
-   ```
-   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-   ```
-3. Set the font to **MesloLGS Nerd Font** (from the `font-meslo-lg-nerd-font`
+2. Set the font to **MesloLGS Nerd Font** (from the `font-meslo-lg-nerd-font`
    cask in the Brewfile) so the `agnoster` theme's glyphs render:
    Preferences → Profiles → Text → Font.
-4. `zsh-autosuggestions` is loaded as an Oh My Zsh custom plugin (see `.zshrc`).
+3. `zsh-autosuggestions` is loaded as an Oh My Zsh custom plugin (see `.zshrc`).
 
 ## Postgres
 

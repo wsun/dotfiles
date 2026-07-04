@@ -3,7 +3,9 @@
 #   1. install Homebrew if missing
 #   2. install everything in the Brewfile (apps, CLIs, fonts, mise)
 #   3. symlink the dotfiles into $HOME (including ~/.config/mise/config.toml)
-#   4. install the global runtimes pinned in ~/.config/mise/config.toml
+#   4. install Oh My Zsh if missing
+#   5. install the global runtimes pinned in ~/.config/mise/config.toml
+#   6. install standalone coding CLIs
 #
 # Safe to re-run — existing correct symlinks are left alone, and anything else
 # is backed up to <file>.backup before linking.
@@ -41,7 +43,15 @@ for f in .bash_profile .bashrc .gitconfig .hushlogin .vimrc .zshrc; do
   echo "    linked $f"
 done
 
-# 4. mise global config
+# 4. Oh My Zsh
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo "==> Installing Oh My Zsh"
+  RUNZSH=no CHSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+  echo "==> Oh My Zsh already installed"
+fi
+
+# 5. mise global config
 echo "==> Linking ~/.config/mise/config.toml"
 mise_src="$DOTFILES/.config/mise/config.toml"
 mise_dest="$HOME/.config/mise/config.toml"
@@ -57,14 +67,31 @@ else
   echo "    linked .config/mise/config.toml"
 fi
 
-# 5. mise global runtimes (node, ruby, python)
+# 6. mise global runtimes (node, ruby, python)
 echo "==> mise install"
 mise install
 
-# 6. Node's package managers via Corepack (yarn/pnpm)
+# 7. Node's package managers via Corepack (yarn/pnpm)
 mise exec -- corepack enable
+
+# 8. Claude Code CLI (native installer -> ~/.local/bin, self-updating)
+if ! command -v claude >/dev/null 2>&1; then
+  echo "==> Installing Claude Code"
+  curl -fsSL https://claude.ai/install.sh | bash
+else
+  echo "==> Claude Code already installed"
+fi
+
+# 9. Codex CLI (official standalone installer -> ~/.local/bin)
+if ! command -v codex >/dev/null 2>&1; then
+  echo "==> Installing Codex CLI"
+  mkdir -p "$HOME/.local/bin"
+  curl -fsSL https://chatgpt.com/codex/install.sh | CODEX_NON_INTERACTIVE=1 CODEX_INSTALL_DIR="$HOME/.local/bin" sh
+else
+  echo "==> Codex CLI already installed"
+fi
+codex --version
 
 echo "==> Done. Open a new shell. Remaining manual steps:"
 echo "    - App Store: sign in before re-running if you added 'mas' apps (brew bundle can't sign in for you)"
-echo "    - Install Oh My Zsh:  sh -c \"\$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
 echo "    - iTerm2: set font to MesloLGS Nerd Font, load Solarized Dark preset"

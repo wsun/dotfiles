@@ -23,7 +23,6 @@ brew "getsentry/tools/sentry-wizard", trusted: true
 cask "1password"
 cask "calibre"
 cask "coconutbattery"
-cask "codex"
 cask "figma"
 cask "firefox"
 cask "font-meslo-lg-nerd-font" # powerline/agnoster glyphs

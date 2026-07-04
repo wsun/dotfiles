@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR='subl -w'
 
 ### mise — single version manager for node, ruby, python
