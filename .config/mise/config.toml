@@ -1,0 +1,12 @@
+[settings]
+# Read .nvmrc/.node-version and .ruby-version, but NOT .python-version.
+# use mise.toml instead.
+idiomatic_version_file_enable_tools = ["node", "ruby"]
+
+[settings.ruby]
+compile = false
+
+[tools]
+node = "lts"
+python = "3.13"
+ruby = "3.4"

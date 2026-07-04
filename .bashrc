@@ -1,41 +1,24 @@
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR='subl -w'
 
-### rbenv
-eval "$(rbenv init -)"
+### mise — single version manager for node, ruby, python
+eval "$(mise activate zsh)"
 
 ### direnv
 eval "$(direnv hook zsh)" 
 
 ### Google Cloud SDK
-# update PATH
-source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 # shell command completion
-source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+gcloud_completion='/opt/homebrew/Caskroom/gcloud-cli/latest/google-cloud-sdk/completion.zsh.inc'
+[ -f "$gcloud_completion" ] && source "$gcloud_completion"
 
 # VSCode
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-### postgres command-line (createdb)
-export PATH=/opt/homebrew/opt/postgresql@12/bin:$PATH
-alias pgstart="brew services start postgresql@12"
-alias pgstop="brew services stop postgresql@12"
-
-### manually link mysql 5.7
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-
-# setup NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# setup yarn
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# pyenv-virtualenv auto-activation
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+### postgres command-line
+export PATH=/opt/homebrew/opt/postgresql@18/bin:$PATH
+alias pgstart="brew services start postgresql@18"
+alias pgstop="brew services stop postgresql@18"
 
 # get current IP address, copy to pasteboard
 alias ip="ipconfig getifaddr en0 | tr -d '\n' | pbcopy"
