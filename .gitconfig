@@ -17,6 +17,7 @@
 
 [core]
     whitespace = fix,trailing-space,space-before-tab,cr-at-eol
+    editor = subl -w
 
 [apply]
     whitespace = fix

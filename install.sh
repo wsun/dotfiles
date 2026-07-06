@@ -92,6 +92,22 @@ else
   echo "    linked sublime/Preferences.sublime-settings"
 fi
 
+# 5c. Sublime Text git commit message settings (syntax-specific)
+echo "==> Linking Sublime Text Git Commit.sublime-settings"
+gitcommit_src="$DOTFILES/sublime/Git Commit.sublime-settings"
+gitcommit_dest="$HOME/Library/Application Support/Sublime Text/Packages/User/Git Commit.sublime-settings"
+mkdir -p "$(dirname "$gitcommit_dest")"
+if [ -L "$gitcommit_dest" ] && [ "$(readlink "$gitcommit_dest")" = "$gitcommit_src" ]; then
+  echo "    already linked"
+else
+  if [ -e "$gitcommit_dest" ] || [ -L "$gitcommit_dest" ]; then
+    echo "    backing up existing $gitcommit_dest -> $gitcommit_dest.backup.$STAMP"
+    mv "$gitcommit_dest" "$gitcommit_dest.backup.$STAMP"
+  fi
+  ln -s "$gitcommit_src" "$gitcommit_dest"
+  echo "    linked sublime/Git Commit.sublime-settings"
+fi
+
 # 6. mise global runtimes (node, ruby, python)
 echo "==> mise install"
 mise install

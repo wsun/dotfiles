@@ -1,0 +1,6 @@
+// Syntax-specific settings applied only when editing git commit messages.
+{
+	"auto_wrap": true,
+	"auto_wrap_width": 72,
+	"rulers": [50, 72]
+}
