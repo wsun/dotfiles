@@ -67,6 +67,22 @@ else
   echo "    linked .config/mise/config.toml"
 fi
 
+# 5b. Sublime Text user preferences
+echo "==> Linking Sublime Text Preferences.sublime-settings"
+subl_src="$DOTFILES/sublime/Preferences.sublime-settings"
+subl_dest="$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
+mkdir -p "$(dirname "$subl_dest")"
+if [ -L "$subl_dest" ] && [ "$(readlink "$subl_dest")" = "$subl_src" ]; then
+  echo "    already linked"
+else
+  if [ -e "$subl_dest" ] || [ -L "$subl_dest" ]; then
+    echo "    backing up existing $subl_dest -> $subl_dest.backup.$STAMP"
+    mv "$subl_dest" "$subl_dest.backup.$STAMP"
+  fi
+  ln -s "$subl_src" "$subl_dest"
+  echo "    linked sublime/Preferences.sublime-settings"
+fi
+
 # 6. mise global runtimes (node, ruby, python)
 echo "==> mise install"
 mise install
