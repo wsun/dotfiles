@@ -51,6 +51,15 @@ else
   echo "==> Oh My Zsh already installed"
 fi
 
+# 4b. zsh-autosuggestions (third-party oh-my-zsh plugin referenced in .zshrc)
+autosuggest_dir="$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+if [ ! -d "$autosuggest_dir" ]; then
+  echo "==> Installing zsh-autosuggestions"
+  git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions "$autosuggest_dir"
+else
+  echo "==> zsh-autosuggestions already installed"
+fi
+
 # 5. mise global config
 echo "==> Linking ~/.config/mise/config.toml"
 mise_src="$DOTFILES/.config/mise/config.toml"
