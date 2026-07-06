@@ -1,6 +1,5 @@
 tap "getsentry/tools"
 tap "heroku/brew"
-tap "homebrew/services"
 
 brew "awscli"
 brew "deno"
@@ -10,6 +9,7 @@ brew "gh"
 brew "git"
 brew "heroku"
 brew "imagemagick"
+brew "libyaml" # for ruby 3.2+
 brew "mas"
 brew "mise"
 brew "poppler" # PDF rendering library (pdftoppm / pdfinfo CLI tools)
