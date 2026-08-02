@@ -32,3 +32,6 @@ tag() {
 	GIT_COMMITTER_DATE="$(git show --format=%aD | head -1)"
 	git tag -a "v$1" -m \""v$1"\"
 }
+
+### machine-local overrides (untracked) — last so it can override the above
+[ -f "$HOME/.bashrc.local" ] && source "$HOME/.bashrc.local"
