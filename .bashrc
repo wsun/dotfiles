@@ -25,12 +25,13 @@ alias ip="ipconfig getifaddr en0 | tr -d '\n' | pbcopy"
 
 # tag a new git version
 tag() {
-	if [ "$#" -ne 1 ]; then
-	  echo "Usage: tag [0.1.3]"
+	if [ "$#" -lt 1 ]; then
+	  echo "Usage: tag [0.1.3] [commit]"
 	  return 1
 	fi
-	GIT_COMMITTER_DATE="$(git show --format=%aD | head -1)"
-	git tag -a "v$1" -m \""v$1"\"
+	local ref="${2:-HEAD}"
+	GIT_COMMITTER_DATE="$(git show -s --format=%aD "$ref")" \
+	  git tag -a "v$1" "$ref" -m "v$1"
 }
 
 ### machine-local overrides (untracked) — last so it can override the above
