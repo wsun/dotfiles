@@ -23,6 +23,9 @@ alias pgstop="brew services stop postgresql@18"
 # get current IP address, copy to pasteboard
 alias ip="ipconfig getifaddr en0 | tr -d '\n' | pbcopy"
 
+# shake the booted iOS simulator
+alias simshake="xcrun simctl spawn booted notifyutil -p com.apple.UIKit.SimulatorShake"
+
 # tag a new git version
 tag() {
 	if [ "$#" -lt 1 ]; then

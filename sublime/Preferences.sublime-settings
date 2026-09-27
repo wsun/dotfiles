@@ -2,5 +2,5 @@
 // and are overridden in turn by syntax-specific settings.
 {
 	"font_size": 10,
-	"color_scheme": "Monokai.sublime-color-scheme"
+	"color_scheme": "Monokai.sublime-color-scheme",
 }
